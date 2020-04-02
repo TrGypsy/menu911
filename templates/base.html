@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Anasayfa </title>
+    <!-- Sosyal medya iconları font awesome -->
+    <link rel="stylesheet" type="text/css" href="{% static 'post/all.css' %}">
+
+    <!-- Hamburger  menu  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'post/hambur.css' %}">
+
+    <!-- Footer  menu  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'post/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'js/bootstrap.min.css' %}">
+
+    <!-- Ana ayarlar  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'post/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'post/ekran.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'post/index.css' %}">
+
+    <!-- Logo  Site Sekmesınde Gozukucek -->
+    <link rel="icon" href="{% static 'img/index.svg' %}" type="image/x-icon" >
+
+    <!-- Yazı karakterı font -->
+    <link rel="stylesheet" type="text/css" href="{% static 'font/ubuntu.css' %}">
+<body>
+
+<!-- Hamburger ve Link -->
+<div class="menu-container">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+        <div></div>
+    </div>
+    <div class="menu">
+        <div>
+            <div class="temp">
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Anasyfa</a></li>
+                    <li><a href="{% url 'about' %}">blog</a></li>
+                    <li><a href="#">hakkında</a></li>
+                    <li><a href="#">bbb</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  İcon svg  -->
+<div class="logo">
+    <a href="#"><img class="svg" src="{% static 'img/index.svg' %}" style="width: 60px; height: 60px"></a>
+</div>
+
+<!-- Ana Ekran -->
+{% block resim %}
+    <section class="umut">
+
+    </section>
+{% endblock resim %}
+
+<!-- Footer -->
+<footer class="footer-umut">
+    <div class="footer-left">
+        <h3>Umut <span> Geçer</span></h3>
+        <p class="footer-links">
+            <a href="#">AnaSayfa
+            </a><a href="#">Blog
+        </a><a href="#">Hakkımızda
+        </a><a href="#">S.S.S</a>
+            <a class="son" href="#" style="border-right: 0;">İletişim</a>
+        </p>
+        <p class="footer-textumut">© 2020 Tüm Hakları Saklıdır. Umut Geçer</p>
+    </div><div class="footer-center">
+    <div><i class="fa fa-map-marker">
+    </i><p><span>Nazilli Uzun Çarsı</span>Aydın, Türkiye</p>
+    </div>
+    <div><i class="fas fa-phone">
+    </i><p>+90 123 456789</p>
+    </div>
+    <div><i class="fa fa-envelope">
+    </i><p><a href="mailto:info@siteciğim.com">info@siteciğim.com</a></p>
+    </div>
+</div><div class="footer-right">
+    <p class="footer-umut1">
+        <span>Hakkımızda</span>
+        Hakkımızda yazısı kısa metin, kısa metin, kısa metin, kısa metin, kısa metin, kısa metin, kısa metin ...
+    </p>
+    <div class="footer-icons">
+        <a href="#"><i class="fab fa-facebook"></i>
+        </a><a href="#"><i class="fab fa-twitter"></i>
+    </a><a href="#"><i class="fab fa-linkedin"></i>
+    </a><a href="#"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+</footer>
+
+</body>
+
+</html>

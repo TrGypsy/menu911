@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block resim %}
+    <div class="grid-container">
+        {% for post in posts.object_list %}
+            <div>
+                {% if post.img.url %}
+                    <img class="resim" src="{{ post.img.url }}">
+                {% endif %}
+
+                <br>
+                <a class="c" href="/post/{{ post.id }}">{{ post.title }}</a><br>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% include 'post/pagi.html' %}
+{% endblock resim %}

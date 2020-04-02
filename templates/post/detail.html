@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block resim %}
+    <div class="grid-container">
+
+            <div>
+                {% if post.img.url %}
+                    <img class="resim_detail" src="{{ post.img.url }}" alt="bilmem">
+                {% endif %}
+
+                <br>
+                <a class="ab">{{ post.content }}</a><br>
+            </div>
+
+    </div>
+
+
+{% include 'post/pagi.html' %}
+{% endblock resim %}

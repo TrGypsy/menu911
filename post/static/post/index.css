@@ -1,0 +1,64 @@
+.grid-container {
+    top: 65px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    padding: 5rem;
+}
+.grid-container > div {
+    text-align: center;
+    font-size: 25px;
+    background-color: #b1a3a31f;
+    display: block;
+    border-bottom: inset 2px rgba(80,80,80,.2);
+}
+a{
+    color: black;
+}
+
+.resim{
+    height: 300px;
+    width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+    .resim {
+        width: 100%;
+        max-height: 150px;
+    }
+    .ab{
+        width: 150%;
+        font-size: 11px;
+        display: inline-block;
+        margin-left: -50px;
+    }
+    .grid-container {
+        top: 65px;
+        display: grid;
+        grid-template-columns: 210px 210px 210px;
+        grid-gap: 30px;
+        padding: 1.5rem;
+        padding-top: 4.5rem;
+    }
+    .grid-container > div {
+        text-align: center;
+        font-size: 15px;
+        background-color: #b1a3a31f;
+        border-bottom: inset 2px rgba(80,80,80,.2);
+    }
+}
+
+@media only screen and (max-width: 486px) {
+    .grid-container {
+        top: 65px;
+        display: grid;
+        grid-gap: 10px;
+        padding: 0.9rem;
+        padding-top: 4.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .resim {
+        width: 100%;
+    }
+}
